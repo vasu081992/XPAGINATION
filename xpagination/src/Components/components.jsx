@@ -19,7 +19,7 @@ console.log(data)
     }
 
 catch(e){
-console.log("failed to fetch data",e)
+alert("failed to fetch data")
 }
 
     }
