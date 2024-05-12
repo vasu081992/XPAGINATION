@@ -11,10 +11,17 @@ console.log(data)
 
     const fetchData = async ()=>{
 
+        try{
       const api = await fetch('https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json')
       const response = await api.json()
       console.log("response",response)
       setdata(response)
+    }
+
+catch(e){
+console.log("failed to fetch data",e)
+}
+
     }
 
     fetchData()
