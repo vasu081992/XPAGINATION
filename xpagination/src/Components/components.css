@@ -1,0 +1,8 @@
+.pagination {
+    display: flex;
+    text-decoration: underline;
+    cursor: pointer;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+}
