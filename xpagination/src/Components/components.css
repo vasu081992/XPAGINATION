@@ -1,8 +1,40 @@
 .pagination {
     display: flex;
-    text-decoration: underline;
-    cursor: pointer;
     gap:10px;
     justify-content: center;
     align-items: center;
+}
+
+.button{
+    cursor:pointer;
+    background-color: green;
+    padding:10px;
+    color:white;
+    border-radius: 5px;
+}
+
+.page{
+    background-color: green;
+    color:white;
+padding:10px
+ 
+}
+
+.title{
+    background-color: green;
+}
+
+.table-item{
+    width:400px;
+    padding: 10px;
+}
+
+.table-item1{
+    width:50px;
+    padding: 5px;
+
+}
+
+tr,thead,table,tbody{
+    border:1px solid grey;
 }

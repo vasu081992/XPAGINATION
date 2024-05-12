@@ -21,29 +21,36 @@ console.log(data)
 
     },[])
 
-    const handlePageClick =(val) =>{
-
-        setpage(val)
+    const handlePageClickNext =() =>{
+        if(page<(data.length)/10){
+        setpage(page+1)
     }
+}
+
+    const handlePageClickBack =() =>{
+       if(page-1){
+        setpage(page-1)
+    }
+}
     return (
         <>
           <table>
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Role</th>
+            <thead >
+              <tr className="title">
+                <th className="table-item1">ID</th>
+                <th className="table-item">Name</th>
+                <th className="table-item">Email</th>
+                <th className="table-item">Role</th>
               </tr>
             </thead>
             <tbody>
               {data.slice(page*10 - 10,page*10).map(item => {
                 return (
                   <tr>
-                    <td>{item.id}</td>
-                    <td>{item.name}</td>
-                    <td>{item.email}</td>
-                    <td>{item.role}</td>
+                    <td className="table-item1">{item.id}</td>
+                    <td className="table-item1">{item.name}</td>
+                    <td className="table-item1">{item.email}</td>
+                    <td className="table-item1">{item.role}</td>
                   </tr>
                 );
               })}
@@ -51,7 +58,7 @@ console.log(data)
           </table>
     {data.length>0 && 
     <div className="pagination">
-{
+{/* {
  
  data.length>0 && (
     <>
@@ -63,7 +70,15 @@ console.log(data)
  )
 
 
+} */}
+
+ <button className="button" onClick={handlePageClickBack}> Previous </button>
+
+{
+    <p className="page">{page}</p>
 }
+ <button className="button" onClick={handlePageClickNext}> Next </button>
+
 
     </div>
 }
