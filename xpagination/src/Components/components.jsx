@@ -34,6 +34,7 @@ console.log(data)
 }
     return (
         <>
+        <h1> Employee Table Data </h1>
           <table>
             <thead >
               <tr className="title">
